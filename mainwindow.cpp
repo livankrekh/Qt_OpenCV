@@ -37,7 +37,7 @@ void MainWindow::on_openVideo_clicked()
     video >> first;
 
     if (!first.empty()) {
-        cv::cvtColor(first, first, CV_BGR2RGB);
+        cv::cvtColor(first, first, cv::COLOR_BGR2RGB);
         img = getQImage(first);
         pixmap.setPixmap( QPixmap::fromImage(img.rgbSwapped()) );
         ui->video->fitInView(&pixmap, Qt::KeepAspectRatio);
@@ -64,7 +64,7 @@ void MainWindow::on_stopStart_clicked()
         video >> frame;
 
         if (!frame.empty()) {
-            cv::cvtColor(frame, frame, CV_BGR2RGB);
+            cv::cvtColor(frame, frame, cv::COLOR_BGR2RGB);
             img_frame = getQImage(frame);
 
             pixmap.setPixmap( QPixmap::fromImage(img_frame.rgbSwapped()) );
@@ -104,4 +104,5 @@ QImage MainWindow::getQImage(cv::Mat &timage)
         temp.setColorTable(colorTable);
         return temp;
     }
+    return QImage();
 }

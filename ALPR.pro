@@ -24,10 +24,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 CONFIG += c++11
 
-INCLUDEPATH += /Users/liabanzh/.brew/Cellar/opencv/3.4.3_2/include/opencv
-INCLUDEPATH += /Users/liabanzh/.brew/Cellar/opencv/3.4.3_2/include
+INCLUDEPATH += C:\Qt\opencv\opencv-build\install\include
 
-LIBS += -L/Users/liabanzh/.brew/Cellar/opencv/3.4.3_2/lib -lopencv_stitching -lopencv_superres -lopencv_videostab -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_dnn_objdetect -lopencv_dpm -lopencv_face -lopencv_photo -lopencv_fuzzy -lopencv_hfs -lopencv_img_hash -lopencv_line_descriptor -lopencv_optflow -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_surface_matching -lopencv_tracking -lopencv_datasets -lopencv_dnn -lopencv_plot -lopencv_xfeatures2d -lopencv_shape -lopencv_video -lopencv_ml -lopencv_ximgproc -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_flann -lopencv_xobjdetect -lopencv_imgcodecs -lopencv_objdetect -lopencv_xphoto -lopencv_imgproc -lopencv_core
+LIBS += C:\Qt\opencv\opencv-build\bin\libopencv_core401.dll
+LIBS += C:\Qt\opencv\opencv-build\bin\libopencv_highgui401.dll
+LIBS += C:\Qt\opencv\opencv-build\bin\libopencv_imgcodecs401.dll
+LIBS += C:\Qt\opencv\opencv-build\bin\libopencv_imgproc401.dll
+LIBS += C:\Qt\opencv\opencv-build\bin\libopencv_video401.dll
+LIBS += C:\Qt\opencv\opencv-build\bin\libopencv_videoio401.dll
+LIBS += C:\Qt\opencv\opencv-build\bin\libopencv_features2d401.dll
+LIBS += C:\Qt\opencv\opencv-build\bin\libopencv_calib3d401.dll
+
+LIBRARIES += opencv_core opencv_highgui opencv_imgproc opencv_videoio
 
 SOURCES += \
         main.cpp \
